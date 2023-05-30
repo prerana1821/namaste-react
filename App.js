@@ -11,7 +11,7 @@
  *      </div>
  * </div>
  *
- *
+ * ReactElement(Object) => HTML(Browser Understands)
  */
 
 const parent = React.createElement("div", { id: "parent" }, [
