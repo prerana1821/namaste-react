@@ -23,7 +23,7 @@ const parent = React.createElement("div", { id: "parent" }, [
 		React.createElement("h1", {}, "I'm a h1 tag"),
 		React.createElement("h2", {}, "I'm a h2 tag"),
 	]),
-]); // => unreadable code
+]); // => unreadable code => that's why we use JSX
 
 console.log(parent);
 
