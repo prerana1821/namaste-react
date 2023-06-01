@@ -1,31 +1,24 @@
-import React from "react"
-import ReactDOM from "react-dom/client"
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-const parent = React.createElement("div", { id: "parent" }, [
-	React.createElement("div", { id: "child" }, [
-		React.createElement("h1", {}, "I'm a h1 tag"),
-		React.createElement("h2", {}, "I'm a h2 tag"),
-	]),
-	React.createElement("div", { id: "child2" }, [
-		React.createElement("h1", {}, "I'm a h1 tag"),
-		React.createElement("h2", {}, "I'm a h2 tag"),
-	]),
-]); // => unreadable code => that's why we use JSX
+const heading = React.createElement(
+	"h1",
+	{ id: "heading" },
+	"This is the heading"
+);
 
-// console.log(parent);
+/* 
+  * JSX (transpiled before it reaches the JS) - Parcel - Babel 
+  *
+  * JSX => Babel transpiles it to React.createElement => ReactElement - JS Object => HTMLELement(render)
+*/
 
-// const heading = React.createElement(
-//     "h1",
-//     {
-//         id: "heading",
-//         xyz: "abc",
-//         style: { color: "red" },
-//     },
-//     "Hello world from React"
-// );
-
-// console.log(heading); // object
+const jsxHeading = (
+	<h1 id='heading' className='heading' style={ { color: "white" } }>
+		This is a JSX heading
+	</h1>
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(parent);
+root.render(jsxHeading);
