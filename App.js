@@ -1,12 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const heading = React.createElement(
-	"h1",
-	{ id: "heading" },
-	"This is the heading"
-);
-
 /* 
   * JSX (transpiled before it reaches the JS) - Parcel - Babel 
   *
@@ -19,6 +13,13 @@ const jsxHeading = (
 	</h1>
 );
 
+const HeadingComponent = () => <h1>This is a component heading.</h1>
+
+const HeadingComponent1 = () => {
+	return <h1>This is a component heading.</h1>
+}
+
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(jsxHeading);
+root.render(<HeadingComponent />);
