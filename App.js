@@ -24,13 +24,15 @@ const HeadingComponent = () => <h1>This is a component heading.</h1>
 // component composition
 const HeadingComponent1 = () => {
 	return (
-		<div>
+		<>
 			{ JSXHeading() }
 			<JSXHeading />
 			<JSXHeading></JSXHeading>
+			<><p>Good</p></>
+			<><>Good</></>
 			{/* { headingElement } - this is how you call element in JSX */ }
 			<h1>This is a component heading.</h1>
-		</div>
+		</>
 	);
 }
 
